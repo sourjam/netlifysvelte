@@ -1,6 +1,7 @@
 <script context="module">
 	export function preload() {
 		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+			console.log('posts', posts)
 			return { posts };
 		});
 	}

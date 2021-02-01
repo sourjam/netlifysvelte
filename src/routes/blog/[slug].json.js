@@ -5,6 +5,7 @@ import grayMatter from 'gray-matter';
 import marked from 'marked';
 
 const getPost = (fileName) => {
+	console.log(fileName)
 	return fs.readFileSync(
 		path.resolve('static/posts', `${fileName}.md`),
 		'utf-8'
@@ -18,7 +19,7 @@ const getPost = (fileName) => {
 
 export function get(req, res, _) {
 	const { slug } = req.params;
-
+	console.log('slug', slug)
 	const post = getPost(slug);
 	const renderer = new marked.Renderer();
 	console.log('post', post)

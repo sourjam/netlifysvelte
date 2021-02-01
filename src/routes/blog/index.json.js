@@ -7,7 +7,7 @@ const getAllPosts = () => {
 	try {
 		return fs.readdirSync('static/posts').map((filename) => {
 			const post = fs.readFileSync(
-				path.resolve('static/posts', fileName),
+				path.resolve('static/posts', filename),
 				'utf-8'
 			);
 			return grayMatter(post).data;

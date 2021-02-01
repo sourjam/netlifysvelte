@@ -15,6 +15,5 @@ collections:
       - label: 'Big Title'
         name: 'bigtitle'
         widget: 'string'
-      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

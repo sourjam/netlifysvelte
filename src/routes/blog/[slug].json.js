@@ -21,10 +21,11 @@ export function get(req, res, _) {
 
 	const post = getPost(slug);
 	const renderer = new marked.Renderer();
-
+	console.log('post', post)
 	const { data, content } = grayMatter(post);
+	console.log('post', data, content)
 	const html = marked(content, { renderer });
-
+	console.log(html)
 	if (html) {
 		res.writeHead(200, {
 			'Content-Type': 'application/json'

@@ -7,7 +7,8 @@ import marked from 'marked';
 const getPost = (fileName) => {
 	console.log(fileName)
 	return fs.readFileSync(
-		path.resolve('static/posts', `${fileName}.md`),
+		// path.resolve('static/posts', `${fileName}.md`),
+		path.resolve('src/pages/blog', `${fileName}.md`),
 		'utf-8'
 	)
 }

@@ -5,9 +5,11 @@ import grayMatter from 'gray-matter';
 
 const getAllPosts = () => {
 	try {
-		return fs.readdirSync('static/posts').map((filename) => {
+		const ogPath = 'static/posts';
+		const ohPath = 'src/pages/blog';
+		return fs.readdirSync(ohPath).map((filename) => {
 			const post = fs.readFileSync(
-				path.resolve('static/posts', filename),
+				path.resolve(ohPath, filename),
 				'utf-8'
 			);
 			return grayMatter(post).data;
@@ -29,5 +31,6 @@ export function get(_, res) {
 	  "Content-Type": "application/json",
 	});
 	const posts = getAllPosts();
+	console.log(posts)
 	res.end(JSON.stringify(posts));
   }

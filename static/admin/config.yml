@@ -36,6 +36,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post.template"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Source URL", name: "sourceUrl", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}

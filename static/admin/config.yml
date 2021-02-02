@@ -37,8 +37,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post.template"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Status", name: "status", widget: "string"}
-      - {label: "Source URL", name: "sourceUrl", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Source URL", name: "sourceUrl", widget: "string", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Body", name: "body", widget: "markdown"}
 
